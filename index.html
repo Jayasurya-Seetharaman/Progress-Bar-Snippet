@@ -1,0 +1,39 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+<style>
+.progress-bar {
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    background: #e8e8e8;
+}
+
+.progress-bar-fill {
+    display: block;
+    padding: 3px;
+    background: #f44337;
+    transition: width 10s ease-in-out;
+}
+</style>
+    
+</head>
+<body>
+
+<div class="progress-bar">
+    <span class="progress-bar-fill" style="width: 0%;"></span>
+</div>      
+
+<h1 style="text-align: center;">Progress Bar</h1>
+<script>
+$('.progress-bar-fill').delay(0).queue(function () {
+    $(this).css('width', '100%')
+});
+</script>
+
+</body></html>
